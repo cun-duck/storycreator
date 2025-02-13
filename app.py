@@ -43,7 +43,7 @@ if st.button("Buat Storybook"):
     processed_scenes = []
     for i, scene in enumerate(scenes):
         # Generate image prompt
-        image_prompt = generate_image_prompt(scene, hf_token)
+        image_prompt = generate_image_prompt(scene, HF_TOKEN)
         
         # Generate illustration
         illustration = generate_illustration(image_prompt,HF_TOKEN)
