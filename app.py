@@ -46,7 +46,7 @@ if st.button("Buat Storybook"):
         image_prompt = generate_image_prompt(scene, hf_token)
         
         # Generate illustration
-        illustration = generate_illustration(image_prompt, hf_token)
+        illustration = generate_illustration(image_prompt)
         illustration_path = f"outputs/images/scene_{i}.png"
         os.makedirs("outputs/images", exist_ok=True)
         illustration.save(illustration_path)
