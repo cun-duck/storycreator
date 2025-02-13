@@ -73,9 +73,9 @@ if st.button("Buat Storybook"):
     
     # Download button
     with open(video_file, "rb") as file:
-        st.download_button(
-            label="Download Storybook",
-            data=file,
-            file_name="storybook.mp4",
-            mime="video/mp4"
-        )
+    st.download_button(
+        label="Download Storybook",
+        data=file,
+        file_name="storybook.mp4",
+        mime="video/mp4"
+    )
