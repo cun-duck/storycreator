@@ -11,7 +11,7 @@ def generate_illustration(prompt,HF_TOKEN):
     # Initialize InferenceClient
     client = InferenceClient(
         provider="hf-inference",
-        api_key=HF_TOKEN
+        api_key="HF_TOKEN"
     )
     
     # Generate image using FLUX.1-dev
