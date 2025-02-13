@@ -43,7 +43,7 @@ if st.button("Buat Storybook"):
     processed_scenes = []
     for i, scene in enumerate(scenes):
         # Generate image prompt
-        image_prompt = generate_image_prompt(scene)
+        image_prompt = generate_image_prompt(scene, hf_token)
         
         # Generate illustration
         illustration = generate_illustration(image_prompt, hf_token)
@@ -52,11 +52,7 @@ if st.button("Buat Storybook"):
         illustration.save(illustration_path)
         
         # Generate narration
-        audio_data = generate_narration(scene, hf_token)
-        audio_path = f"outputs/audios/scene_{i}.mp3"
-        os.makedirs("outputs/audios", exist_ok=True)
-        with open(audio_path, "wb") as f:
-            f.write(audio_data)
+        audio_path = generate_narration(scene, hf_token)
         
         # Store scene data
         processed_scenes.append({
