@@ -3,3 +3,6 @@ huggingface_hub
 requests
 moviepy
 Pillow
+torch
+diffusers
+transformers
