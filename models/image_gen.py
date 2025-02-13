@@ -2,12 +2,12 @@ import torch
 from diffusers import FluxPipeline
 from PIL import Image
 
-def generate_illustration(prompt, hf_token=None):
+def generate_illustration(prompt, hf_token):
     # Load the FLUX.1-dev pipeline
     pipe = FluxPipeline.from_pretrained(
         "black-forest-labs/FLUX.1-dev",
         torch_dtype=torch.bfloat16,
-        use_auth_token=hf_token  # Optional: Use HF token if required
+        use_auth_token=hf_token  # Sertakan token autentikasi
     )
     
     # Enable CPU offloading to save VRAM
