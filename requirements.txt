@@ -6,4 +6,4 @@ Pillow
 torch
 diffusers
 transformers
-ffmpeg
+pydub
