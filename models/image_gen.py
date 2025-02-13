@@ -1,7 +1,7 @@
 from huggingface_hub import InferenceClient
 from PIL import Image
 
-def generate_illustration(prompt):
+def generate_illustration(prompt,HF_TOKEN):
     """
     Menghasilkan gambar menggunakan FLUX.1-dev melalui Hugging Face Inference API.
     :param prompt: Prompt teks untuk menghasilkan gambar.
@@ -11,7 +11,7 @@ def generate_illustration(prompt):
     # Initialize InferenceClient
     client = InferenceClient(
         provider="hf-inference",
-        api_key="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"
+        api_key=HF_TOKEN
     )
     
     # Generate image using FLUX.1-dev
