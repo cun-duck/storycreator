@@ -43,10 +43,10 @@ if st.button("Buat Storybook"):
     processed_scenes = []
     for i, scene in enumerate(scenes):
         # Generate image prompt
-        image_prompt = generate_image_prompt(scene, HF_TOKEN)
+        image_prompt = generate_image_prompt(scene, "HF_TOKEN")
         
         # Generate illustration
-        illustration = generate_illustration(image_prompt,HF_TOKEN)
+        illustration = generate_illustration(image_prompt,"HF_TOKEN")
         illustration_path = f"outputs/images/scene_{i}.png"
         os.makedirs("outputs/images", exist_ok=True)
         illustration.save(illustration_path)
