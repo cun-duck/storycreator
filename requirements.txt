@@ -1,7 +1,7 @@
 streamlit
 huggingface_hub
 requests
-moviepy
+moviepy==1.0.3
 Pillow
 torch
 diffusers
